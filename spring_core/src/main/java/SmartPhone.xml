@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+<bean id="mySimCard" class="com.ty.Dep_Injection.Sim">
+	<property name="number" value="5678905678"></property>
+	<property name="service" value="JIO"></property>
+</bean>
+
+	<bean id="mySmartPhone" class="com.ty.Dep_Injection.SmartPhone">
+	
+	<property name="name" value="mi"></property>
+	<property name="ram" value="8gb"></property>
+		<property name="s" ref="mySimCard"></property>
+	</bean>
+
+</beans>
